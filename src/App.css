@@ -1,38 +1,84 @@
-.App {
+.title {
+  color: goldenrod;
+  font-size: 36px; /* Reduced font size for better mobile readability */
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(160, 248, 216), rgb(110, 247, 215));
+  height: auto;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-input {
+  width: 70%; /* Take full width on mobile */
+  height: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-group {
+  flex-direction: column; /* Stack elements vertically on mobile */
+  align-items: stretch; /* Stretch elements to full width */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+.grid {
+  background-color: rgb(197, 195, 195);
+  width: 70%;
+  height: 350px;
+  border: 15px solid rgb(208, 132, 246);
+  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-auto-rows: 25%;
+  gap: 1%;
+  row-gap: 1%;
+  padding: 1%;
+}
+
+.gift {
+  height: 80px; /* Increase height of gift boxes for better visibility */
+  width: 80px;
+  background: url("gift.jpg");
+  background-size: cover;
+}
+
+
+
+.generated-boxes-heading {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px; /* Reduced font size for better mobile readability */
+}
+
+p{
+  align-items: baseline;
+  text-align: left;
+  margin-top: 0;
+}
+
+button {
+  margin: 10px 0; /* Add some vertical space around the button */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  height: 25px;
+  background-color: #f9833e;
   color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease; /* Add a smooth transition effect */
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #db13f1; /* Change the background color on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  background-color: #db13f1; /* Change the background color when clicked */
 }
+
+
+
